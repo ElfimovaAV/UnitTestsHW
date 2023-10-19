@@ -1,4 +1,4 @@
-package seminars.fourth.book;
+package seminar4.book;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,6 +7,12 @@ import java.util.Map;
 
 public class InMemoryBookRepository implements BookRepository  {
     private final Map<String, Book> books;
+
+    public static void main(String[] args) {
+        InMemoryBookRepository inMemoryBookRepository = new InMemoryBookRepository();
+        BookService bookService = new BookService(inMemoryBookRepository);
+        System.out.println(bookService.findAllBooks());
+    }
 
     public InMemoryBookRepository() {
         this.books = new HashMap<>();
