@@ -22,6 +22,7 @@ public class TestCompareNumsLists {
         assertEquals(10, listOfNumbers1.getNumbers().get(0));
     }
 
+
     @Test
     public void testListSize() {
         listOfNumbers1.addNumbersInList(10);
@@ -38,7 +39,9 @@ public class TestCompareNumsLists {
         Calculation calculation = new Calculation();
         assertEquals(16, calculation.calculateOfAverage(listOfNumbers1));
     }
-
+    /**
+     * Тестируется сценарий, когда среднее значение первого списка больше среднего значения второго - позитивная проверка
+     */
     @Test
     public void testReturnResultOfCompareWhenFirstListMoreSecondList() {
         listOfNumbers1.addNumbersInList(100);
@@ -55,6 +58,9 @@ public class TestCompareNumsLists {
                 calculation.returnResultOfCompare(listOfNumbers1, listOfNumbers2));
 
     }
+    /**
+     * Тестируется сценарий, когда среднее значение второго списка больше среднего значения первого - позитивная проверка
+     */
 
     @Test
     public void testReturnResultOfCompareWhenSecondListMoreFirstList() {
@@ -72,6 +78,10 @@ public class TestCompareNumsLists {
                 calculation.returnResultOfCompare(listOfNumbers1, listOfNumbers2));
 
     }
+
+    /**
+     * Тестируется сценарий, когда среднее значение обоих списков равны - позитивная проверка
+     */
 
     @Test
     public void testReturnResultOfCompareWhenListIsEquals() {

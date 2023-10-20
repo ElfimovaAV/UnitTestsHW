@@ -1,6 +1,5 @@
 package seminar6;
 
-import java.util.List;
 
 public class Calculation {
     private ListOfNumbers listOfNumbers;
